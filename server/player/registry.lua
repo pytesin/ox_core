@@ -38,6 +38,7 @@ local function addPlayer(playerId, username)
     end
 
     if not userId then
+        username = utf8.len(username), string.len(username)
         userId = db.createUser(username, Ox.GetIdentifiers(playerId)) --[[@as number]]
     end
 
